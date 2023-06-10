@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AsYUICVeU9593UU2cCLsbovW/PaDascpv7y9ky8Kv/cTIP1gKdoEA2lhwpkJ/3SF6OF1QAyXfN4FAfctoufxVg==",
+  "dgSpecHash": "MdYqsOz+v5NSE3hjdp5q1FGZVjY1x1DFYo/k8J8n7zB1b0jpSYPkXFcTFmYj+jQY9dz+5BM6bdLGATiWEYSOXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Олег\\source\\repos\\SimbaBot\\SimbaBot\\SimbaBot.csproj",
+  "projectFilePath": "E:\\BOTs\\GitHub\\Bots\\SimbaBot\\SimbaBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Олег\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Олег\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

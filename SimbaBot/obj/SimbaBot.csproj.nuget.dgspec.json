@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Олег\\source\\repos\\SimbaBot\\SimbaBot\\SimbaBot.csproj": {}
+    "E:\\BOTs\\GitHub\\Bots\\SimbaBot\\SimbaBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Олег\\source\\repos\\SimbaBot\\SimbaBot\\SimbaBot.csproj": {
+    "E:\\BOTs\\GitHub\\Bots\\SimbaBot\\SimbaBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Олег\\source\\repos\\SimbaBot\\SimbaBot\\SimbaBot.csproj",
+        "projectUniqueName": "E:\\BOTs\\GitHub\\Bots\\SimbaBot\\SimbaBot.csproj",
         "projectName": "SimbaBot",
-        "projectPath": "C:\\Users\\Олег\\source\\repos\\SimbaBot\\SimbaBot\\SimbaBot.csproj",
+        "projectPath": "E:\\BOTs\\GitHub\\Bots\\SimbaBot\\SimbaBot.csproj",
         "packagesPath": "C:\\Users\\Олег\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Олег\\source\\repos\\SimbaBot\\SimbaBot\\obj\\",
+        "outputPath": "E:\\BOTs\\GitHub\\Bots\\SimbaBot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
