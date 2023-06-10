@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Withdrawal>
+<h2>Все заявки(@Model.Count())</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">TId</th>
+            <th scope="col">Дата</th>
+            <th scope="col">Сумма</th>
+            <th scope="col">Описание</th>
+            <th scope="col">Отметить выполненным</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var el in Model)
+        {
+            <tr>
+                <th scope="row">@el.Id</th>
+                <td>@el.Tid</td>
+                <td>@el.DateWithdrawal</td>
+                <td>@el.Amount</td>
+                <td>@el.Description</td>
+                <td><a href="@Url.Action("CompleteWithdrawal", "home", new { Id = @el.Id })">Отметить выполненным</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
