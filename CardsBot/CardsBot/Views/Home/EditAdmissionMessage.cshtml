@@ -1,0 +1,21 @@
+﻿@model Message
+@{
+    ViewBag.Title = "EditAdmissionMessage";
+}
+
+<h2>Редактирование приветственного сообщения в канале</h2>
+
+<form asp-action="EditAdmissionMessage" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result" enctype="multipart/form-data">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="textarea">Сообщение</label><br><br>
+                <textarea class="form-control" name="message" id="textarea" rows="6" cols="10">@Model.Text</textarea>
+            </div>
+        </div>
+    </div><br><br>
+    <input type="submit" class="btn-success" value="Сохранить" />
+</form><br><br>
+<div>
+    <h3 id="result"></h3>
+</div>

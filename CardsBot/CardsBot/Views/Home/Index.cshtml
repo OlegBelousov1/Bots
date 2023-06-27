@@ -1,0 +1,59 @@
+﻿@model List<BotUser>
+@{
+    ViewBag.Title = "AdminUserPanel";
+}
+
+<h2>Все пользователи бота(@Model.Count())</h2>
+<h3>Количество пользователей, заблокировавших бота: @ViewBag.Count</h3><br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">First Date</th>
+            <th scope="col">Telegramm Id</th>
+            <th scope="col">Заблокировал бота</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var el in Model)
+        {
+            if (el.Banned)
+            {
+                <tr style="background:#FFCCCC">
+                    <th scope="row">@el.Id</th>
+                    <td>@el.Name</td>
+                    <td>@el.FirstDate</td>
+                    <td>@el.TId</td>
+                    @if (el.BotIsBanned == true)
+                    {
+                        <td>Да</td>
+                    }
+                    else
+                    {
+                        <td>Нет</td>
+                    }
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <th scope="row">@el.Id</th>
+                    <td>@el.Name</td>
+                    <td>@el.FirstDate</td>
+                    <td>@el.TId</td>
+                    @if (el.BotIsBanned == true)
+                    {
+                        <td>Да</td>
+                    }
+                    else
+                    {
+                        <td>Нет</td>
+                    }
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<small>*Светло Красный цвет - пользователь забанен</small>

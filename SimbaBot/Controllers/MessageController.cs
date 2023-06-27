@@ -53,7 +53,7 @@ namespace SimbaBot.Controllers
                         await _userManager.EditUserAsync(inviter);
                     }
                 }
-                await client.SendTextMessageAsync(payload, "Заказ успешно оплачен");
+                await client.SendTextMessageAsync(payload, "Ваш заказ успешно оплачен");
                 return Ok();
             }
             var data = await GetInformationFromUpdate(update, client);
