@@ -1,0 +1,20 @@
+﻿@model List<TopRefferals>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Кто пригласил</th>
+            <th scope="col">Кол-во</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var el in Model)
+        {
+
+                <tr>
+                <td><a asp-action="SeeFullRefferalsInfo" asp-controller="Home" asp-route-tid="@el.TId">@el.Name</a></td>
+                    <td>@el.RefferalsCount</td>
+                </tr>
+        }
+    </tbody>
+</table>

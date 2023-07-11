@@ -1,0 +1,24 @@
+﻿@model Text
+
+@{
+    ViewBag.Title = "EditText";
+}
+
+<br />
+
+<form asp-action="EditText" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="formGroupExampleInput">Приветственный текст</label>
+                <textarea class="form-control" asp-for="StartText">@Model.StartText</textarea>
+            </div>
+        </div>
+        <input hidden value="@Model.Id" asp-for="Id" />
+    </div><br />
+    <input type="submit" class="btn-success" value="Изменить" />
+</form>
+<br />
+<div>
+    <h3 id="result"></h3>
+</div>

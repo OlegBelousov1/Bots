@@ -1,0 +1,93 @@
+﻿@model IEnumerable<FullRefferalInfo>
+<h2>Все рефералы пользователя (@Model.Count())</h2>
+<div>
+    <h3 id="result"></h3>
+</div><br/>
+<h3>Рефералы за день</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Имя пользователя</th>
+            <th scope="col">Дата присоединения</th>
+            <th scope="col">Удалить</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var el in Model.Where(i => i.Date > DateTime.Now.AddDays(-1)))
+        {
+            <tr>
+                <th scope="row">@el.Id</th>
+                <td>@el.Name</td>
+                <td>@el.Date</td>
+                <td>
+                    <form asp-action="DeleteRefferal" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+                        <input type="hidden" value="@el.Id" name="Id" />
+                        <button type="submit" class="btn btn-danger">Удалить</button>
+                    </form>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+<h3>Рефералы за неделю</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Имя пользователя</th>
+            <th scope="col">Дата присоединения</th>
+            <th scope="col">Удалить</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var el in Model.Where(i => i.Date > DateTime.Now.AddDays(-7)))
+        {
+
+            <tr>
+                <th scope="row">@el.Id</th>
+                <td>@el.Name</td>
+                <td>@el.Date</td>
+                <td>
+                    <form asp-action="DeleteRefferal" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+                        <input type="hidden" value="@el.Id" name="Id" />
+                        <button type="submit" class="btn btn-danger">Удалить</button>
+                    </form>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+<h3>Рефералы за месяц</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Имя пользователя</th>
+            <th scope="col">Дата присоединения</th>
+            <th scope="col">Удалить</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var el in Model.Where(i => i.Date > DateTime.Now.AddDays(-30)))
+        {
+
+            <tr>
+                <th scope="row">@el.Id</th>
+                <td>@el.Name</td>
+                <td>@el.Date</td>
+                <td>
+                    <form asp-action="DeleteRefferal" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+                        <input type="hidden" value="@el.Id" name="Id" />
+                        <button type="submit" class="btn btn-danger">Удалить</button>
+                    </form>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+

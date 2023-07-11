@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "SeeTopRefs";
+}
+
+<h2>Топ 5 рефералов</h2>
+<form asp-action="SeeTopRefs" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+    <p>Введите за какое кол-во дней хотите получить топ</p>
+    <input type="text" class="form-control" name="days" placeholder="Введите в днях" />
+    <br />
+    <input type="submit" class="form-control btn btn-success" value="Узнать" />
+</form>
+<br />
+<form asp-action="DeleteAllRefferals" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+    <input type="submit" class="form-control btn btn-danger" value="Удалить всех рефералов" />
+</form>
+<br />
+<div>
+    <h3 id="result"></h3>
+</div>

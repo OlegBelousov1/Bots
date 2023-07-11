@@ -1,0 +1,25 @@
+﻿@model int
+@{
+    ViewBag.Title = "AddAccounts";
+}
+
+<h2>Добавления аккаунтов</h2>
+<h2>Кол-во аккаунтов: @Model</h2>
+<form asp-action="AddAccounts" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="formGroupExampleInput">Аккаунты</label>
+                <textarea class="form-control" name="Accounts"></textarea>
+            </div>
+        </div>
+    </div><br/>
+    <input type="submit" class="btn-success" value="Добавить" />
+</form>
+<br />
+<form asp-action="DeleteAllAccounts" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+    <input type="submit" class="btn-danger" value="Удалить все" />
+</form><br/>
+<div>
+    <h3 id="result"></h3>
+</div>

@@ -1,0 +1,43 @@
+﻿@model BotUser
+
+@{
+    ViewBag.Title = "EditUser";
+}
+
+<h2>Редактирования пользователя @(Model.Name == null ? "" : Model.Name)</h2>
+<br />
+
+<form asp-action="EditUser" asp-controller="Home" data-ajax="true" data-ajax-method="post" data-ajax-update="#result">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="formGroupExampleInput">Имя в телеграме</label>
+                <input type="text" class="form-control" value="@Model.Name" asp-for="Name" readonly>
+            </div>
+        </div><br/>
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="formGroupExampleInput">Id в телеграме</label>
+                <input type="text" class="form-control" value="@Model.TId" asp-for="TId" readonly>
+            </div>
+        </div><br />
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="formGroupExampleInput">Дата первого обращения к боту</label>
+                <input type="datetime" class="form-control" value="@Model.FirstDate" asp-for="FirstDate" readonly>
+            </div>
+        </div><br />
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="checkbox" asp-for="Banned">
+                <label class="form-check-label" for="exampleCheck1">Бан</label>
+            </div>
+        </div>
+        <input hidden asp-for="Id" value="@Model.Id">
+        <input type="datetime" hidden asp-for="LastTake" value="@Model.LastTake">
+    </div><br/>
+    <input type="submit" class="btn-success" value="Изменить" />
+</form><br/>
+<div>
+    <h3 id="result"></h3>
+</div>
